@@ -21,6 +21,7 @@ resource "azurerm_monitor_data_collection_rule" "lin_system_log_collection_rule_
       facility_names = ["daemon", "syslog"]
       log_levels     = ["Warning", "Error", "Critical", "Alert", "Emergency"]
       name           = "eventLogsDataSource"
+      streams        = ["Microsoft-Syslog"]
     }
   }
 
