@@ -4,7 +4,7 @@ resource "azurerm_public_ip" "Server-Lin-1_ip" {
   name                = join("-", [local.project_name, "Server-Lin-1-IP"])
   location            = data.azurerm_resource_group.rg.location
   resource_group_name = data.azurerm_resource_group.rg.name
-  allocation_method   = "Dynamic"
+  allocation_method   = "Static"
   tags                = local.common_tags
 
   timeouts {
