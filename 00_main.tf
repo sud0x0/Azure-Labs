@@ -3,7 +3,7 @@ terraform {
   required_providers {
     azurerm = {
       source  = "hashicorp/azurerm"
-      version = "< 3.89.0" # Temporary as this is due to a bug: https://github.com/hashicorp/terraform-provider-azurerm/issues/24804
+      version = "4.13.0"
     }
   }
   backend "azurerm" {
@@ -16,6 +16,7 @@ terraform {
 
 # Configure the Microsoft Azure Provider
 provider "azurerm" {
+  resource_provider_registrations = "none"
   features {}
 }
 
