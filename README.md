@@ -73,3 +73,13 @@ This information is as of May 2024.
 - Update the values in the "vars_az.yml" and "vars_tf.yml" files. Then push the updates to the newly created branch.
 - Go to pipelines.
 - Run the pipeline. Make sure to choose the correct branch. You will have to manually permit the pipeline if this is the first run.
+
+#### Other information
+
+**Virtual machine & extension information**
+
+- Authenticate first: `az login`
+- Use this command to identify the latest linux azure monitor version: `az vm extension image list --location australiaeast --name AzureMonitorLinuxAgent --output table`
+- Use this command to identify the latest linux image version and its offer: `az vm image list --publisher Canonical --output table`
+- Use this command to identify the latest windows azure monitor version: `az vm extension image list --location australiaeast -o table --name AzureMonitorWindowsAgent`
+- Use this command to identify the latest linux image version and its offer: `az vm image list --publisher windows --output table`

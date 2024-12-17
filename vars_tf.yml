@@ -1,3 +1,12 @@
 tf_only_variables:
-  access_allow_list: ['']  # ['ip1','ip2'] {Azure devops does not support arrays}
-  random_value: '' # Just a random value (only numbers and letters): E.g. 47042600400
+  access_allow_list: [""] # ['ip1','ip2'] {Azure devops does not support arrays}
+  random_value: "" # Just a random value (only numbers and letters): E.g. 47042600400
+  vm_size_sku: "Standard_B2s" # The size of the virtual machine
+  linux_publisher: "canonical" # The publisher of the image
+  linux_image_sku: "22_04-lts-gen2" # The SKU of the image
+  linux_offer: "0001-com-ubuntu-server-jammy" # The offer of the image
+  azure_monitor_linux_version: "1.9" # The version of the Linux Azure Monitor for VMs extension
+  windows_publisher: "MicrosoftWindowsServer" # The publisher of the image
+  windows_offer: "WindowsServer" # The offer of the image
+  windows_image_sku: "2022-Datacenter" # The SKU of the image
+  azure_monitor_windows_version: "1.9" # The version of the Windows Azure Monitor for VMs extension

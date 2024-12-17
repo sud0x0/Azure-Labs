@@ -1,15 +1,14 @@
 variables:
-  owner: ''
-  team: ''
-  project_name: '' # Use "-" instead of spaces. Should be less than 15 chars.
-  location: '' # the location of the Azure Resource Group and it's components. E.g.: Australia East
-  service_connection_name: '' # The service connection name that you created within Azure devops
-  rg_name: ''  # The resource group name
-  storage_account_name: '' 
-  container_name: '' 
-  tfstate_file_name: '' # The value must be similar to '{anyname}.terraform.tfstate'.
-  kv_name: '' # The key vault name.
-  kv_key_name_1: '' # username key name in key vault
-  kv_key_name_2: '' # password key name in key vault
-  requirenment: '' # build or destroy (before use destroy, you must build)
-  
+  owner: ""
+  team: ""
+  project_name: "" # Use "-" instead of spaces. Should be less than 15 chars.
+  location: "" # the location of the Azure Resource Group and it's components. E.g.: Australia East
+  service_connection_name: "" # The service connection name that you created within Azure devops
+  rg_name: "" # The resource group name
+  storage_account_name: ""
+  container_name: ""
+  tfstate_file_name: "" # The value must be similar to '{anyname}.terraform.tfstate'.
+  kv_name: "" # The key vault name.
+  kv_key_name_1: "" # username key name in key vault
+  kv_key_name_2: "" # password key name in key vault
+  requirenment: "build" # build or destroy (before use destroy, you must build)

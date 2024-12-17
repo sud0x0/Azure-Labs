@@ -24,26 +24,17 @@ locals {
   random_value         = local.yaml_data_2.tf_only_variables.random_value
 }
 
-## Virtual Machines ##
-
-# Authenticate first: az login --scope https://management.core.windows.net//.default
-# Use this command to identify the latest linux azure monitor version: az vm extension image list --location australiaeast --name AzureMonitorLinuxAgent --output table 
-# Use this command to identify the latest linux image version and its offer: az vm image list --publisher Canonical --output table 
-# Use this command to identify the latest windows azure monitor version: az vm extension image list --location australiaeast -o table --name AzureMonitorWindowsAgent
-# Use this command to identify the latest linux image version and its offer: az vm image list --publisher windows --output table 
-
 locals {
-  vm_size_sku                   = "Standard_B2s"
-  linux_publisher               = "canonical"
-  linux_image_sku               = "22_04-lts-gen2"
-  linux_offer                   = "0001-com-ubuntu-server-jammy"
-  azure_monitor_linux_version   = "1.9"
-  windows_publisher             = "MicrosoftWindowsServer"
-  windows_offer                 = "WindowsServer"
-  windows_image_sku             = "2022-Datacenter"
-  azure_monitor_windows_version = "1.9"
+  vm_size_sku                   = local.yaml_data_2.tf_only_variables.vm_size_sku
+  linux_publisher               = local.yaml_data_2.tf_only_variables.linux_publisher
+  linux_image_sku               = local.yaml_data_2.tf_only_variables.linux_image_sku
+  linux_offer                   = local.yaml_data_2.tf_only_variables.linux_offer
+  azure_monitor_linux_version   = local.yaml_data_2.tf_only_variables.azure_monitor_linux_version
+  windows_publisher             = local.yaml_data_2.tf_only_variables.windows_publisher
+  windows_offer                 = local.yaml_data_2.tf_only_variables.windows_offer
+  windows_image_sku             = local.yaml_data_2.tf_only_variables.windows_image_sku
+  azure_monitor_windows_version = local.yaml_data_2.tf_only_variables.azure_monitor_windows_version
 }
-
 
 ## Tags and Build Time Limit ##
 
